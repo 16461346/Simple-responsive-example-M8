@@ -1,0 +1,58 @@
+.header, .nav, .main, .sidebar, .advartise, .footer{
+    background-color: rgba(255, 162, 95, 0.993);
+    border: 2px solid rgba(69, 90, 38, 0.801);
+    border-radius: 5px;
+}
+.header{
+    grid-area: header;
+}
+.nav{
+    grid-area: nav;
+}
+.main{
+    grid-area: main;
+}
+.sidebar{
+    grid-area: sidebar;
+}
+.advartise{
+    grid-area: advartise;
+}
+.footer{
+    grid-area: footer;
+}
+.container{
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+    
+    "nav     header      header      header"
+    "nav     main        main        sidebar"
+    "nav     main        main        advartise"
+    "footer     footer      footer      footer"
+    ;
+}
+@media screen and (max-width:576px) {
+    .container{
+        grid-template-areas: 
+        "header"
+        "footer"/* eita amare siriyal vabe na bosaileo parbo 
+                 jokhon amar siriyal ta venge dei jemon=footer oupore disi tokhon devicer 576px hole footer Header er niche jabe*/
+        "nav"
+        "main"
+        "sidebar"
+        "advartise"
+        
+        ;
+    }
+}
+@media screen and (min-width:576px) and (max-width:992px) {
+    .container{
+        grid-template-areas: 
+        "header header header"
+         "nav nav nav"
+        " sidebar  main main"
+        "advartise footer footer"
+        ;
+    }
+}
